@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Athkar.MainPage"
+             FlowDirection="RightToLeft"
+             >
+
+    <StackLayout>
+        <ListView x:Name="lvAthkar" HasUnevenRows="True" ItemSelected="lvAthkar_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Margin="20" Padding="10">
+                            <Image VerticalOptions="Center" HorizontalOptions="Center" Source="{Binding Image}" HeightRequest="50" WidthRequest="50"/>
+                            <Label VerticalOptions="Center" HorizontalOptions="Center" Text="{Binding Subject}" FontSize="Medium"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+
+</ContentPage>
